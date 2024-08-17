@@ -7,6 +7,6 @@ import ProductDetails from '../features/productManagement/components/ProductDeta
 const router = createBrowserRouter([
     // routes
     { path: '/', element:<ProductList/> },
-    { path: '/product/details:id', element:<ProductDetails/> }
+    { path: '/product/details/:id', element:<ProductDetails/> }
 ])
 export default router
