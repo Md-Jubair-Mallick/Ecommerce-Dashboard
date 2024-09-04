@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useProductList from '../hooks/useProductList';
 import '../styles/ProductList.css';
-
+import { useDeleteProduct } from '../hooks/useProductMutation';
 // Component for rendering individual product UI
 const ProductItem = ({ item }) => {
   const [index, setIndex] = useState(0);
   const url = item?.imageUrl || [];
   const nextImage = () => setIndex((prev) => (prev < url.length - 1 ? prev + 1 : prev));
   const prevImage = () => setIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  const { mutate } = useDeleteProduct()
 
   return (
     <div className="item" key={item.id}>
@@ -25,6 +26,13 @@ const ProductItem = ({ item }) => {
         <p>{item.description}</p>
         <p>Price: ${item.price}</p>
         <p>Discount: {item.discount}%</p>
+      </Link>
+      <button onClick={()=>mutate(item.id)}>Delete</button>
+      <Link to={`/product/mutate/${item.id}`}>
+      {/* To Do
+      * - when update form page open then previous data of that item should be fill auto in all fields
+      */}
+      <button>Update</button>
       </Link>
     </div>
   );
@@ -84,7 +92,7 @@ const SortItem = ({ setSortBy, setSortOrder }) => {
   );
 };
 
-const ProductList = () => {
+const ProductList_ = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState('productName');
   const [sortOrder, setSortOrder] = useState('asc');
@@ -111,18 +119,12 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
-
-/** To Do:
- *  - Display a list of products with pagination and sorting by(price, descount, ratings)
- *  - Map products to individual components
- *  - Implement previous and next buttons for pagination
- *  - Add error handling for API requests
- *  - Handle product images
- *  - change product images by clicking button
- * 
- *  - ## omitted ----------------------->
- *  - Include star-rating, rating number, and reviews
- *  - Link each product to its detail page
- *  - Ensure the selected value is reset or maintained after loading (SORT DROPDOWN BOX)
- */
+const ProductMutation =()=>{
+  return(
+    <>
+    <button>Add Product</button>
+    <ProductList_/>
+    </>
+  )
+}
+export default ProductMutation
