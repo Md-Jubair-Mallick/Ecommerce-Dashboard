@@ -14,14 +14,12 @@
   - Ensure that pagination and sorting are correctly implemented by passing the appropriate parameters to the `useProductList` hook.
   - Remember to remove `console.log` statements before deploying to production.
   - Add loading, error handling, and conditional rendering to improve user experience.
-  - **Product Details**:
+- **Product Details**:
   - Implement the `ProductDetails` component to display product details fetched from the API.
   - Ensure that the product details are fetched correctly using the `fetchProduct` function.
-  - **Product Mutation**:
+- **Product Mutation**:
   - Implement the `useProductMutation` hook to handle product creation, update, and deletion.
   - Ensure that the `ProductForm` component is updated to use the `useProductMutation`.
-  - **Product Form**:
+- **Product Form**:
   - Implement the `ProductForm` component to handle product creation and update.
   - Ensure that the form data is sent to the API using the `useProductMutation` hook
-  
-  
