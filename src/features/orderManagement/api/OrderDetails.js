@@ -1,7 +1,13 @@
 import axios from "axios";
 
-const fetchOrderDetails = async (id) => {
+export const fetchOrderDetails = async (id) => {
     const { data } = await axios.get(`http://localhost:3000/orders?id=${id}`)
-    return data;
+    console.log(data)
+    return data[0];
 };
-export default fetchOrderDetails
+
+export const fetchCustomerDetails = async (id) => {
+    const { data } = await axios.get(`http://localhost:3000/customers?id=${id}`)
+    console.log(data)
+    return data[0];
+}
