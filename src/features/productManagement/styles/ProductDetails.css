@@ -1,0 +1,21 @@
+.image-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-buttons button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.image-buttons img {
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.image-buttons img:hover {
+    border-color: #333;
+}
