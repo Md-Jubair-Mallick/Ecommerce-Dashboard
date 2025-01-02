@@ -1,0 +1,136 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7fafc; /* Light Gray Background */
+    color: #4a5568; /* Dark Gray Text */
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .p-6 {
+    padding: 24px;
+  }
+  
+  .bg-gray-100 {
+    background-color: #f7fafc;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 20px;
+  }
+  
+  /* Add Button */
+  button {
+    background-color: #3182ce; /* Blue background */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2b6cb0; /* Darker blue on hover */
+  }
+  
+  /* Filter by Status */
+  select {
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #3182ce;
+    background-color: #edf2f7;
+    outline: none;
+  }
+  
+  .mb-4 {
+    margin-bottom: 16px;
+  }
+  
+  /* Customer List Section */
+  .customer-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .customer-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .customer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .customer-card h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+  }
+  
+  .customer-card p {
+    font-size: 1rem;
+    color: #4a5568;
+  }
+  
+  /* Pagination */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  
+  .page-button {
+    background-color: #edf2f7;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .page-button:hover {
+    background-color: #3182ce;
+    color: white;
+  }
+  
+  .page-button:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+  }
+  
+  /* Loading & Error States */
+  .loading,
+  .error {
+    font-size: 18px;
+    text-align: center;
+    color: #e53e3e; /* Error red */
+    margin-top: 20px;
+  }
+  

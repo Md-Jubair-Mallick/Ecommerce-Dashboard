@@ -1,0 +1,108 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* EditCustomerPage Styles */
+  .EditCustomerPage {
+    background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .EditCustomerPage .form-container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+  }
+  
+  .EditCustomerPage .form-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .EditCustomerPage h1 {
+    font-size: 1.8rem;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* CustomerForm Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Submit Button */
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .EditCustomerPage .form-container {
+      padding: 2rem;
+    }
+  
+    .EditCustomerPage h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

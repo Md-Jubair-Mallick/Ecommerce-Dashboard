@@ -1,0 +1,69 @@
+/* CustomerItem Component Styles */
+.customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .customer-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  .customer-item .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .customer-item .details p {
+    margin: 0;
+  }
+  
+  .customer-item .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .customer-item .email {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .customer-item .actions button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .customer-item .actions button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .customer-item .edit-button {
+    background-color: #fbbf24; /* Yellow */
+    color: white;
+    border: none;
+  }
+  
+  .customer-item .edit-button:hover {
+    background-color: #f59e0b;
+  }
+  
+  .customer-item .delete-button {
+    background-color: #ef4444; /* Red */
+    color: white;
+    border: none;
+  }
+  
+  .customer-item .delete-button:hover {
+    background-color: #dc2626;
+  }
+  
